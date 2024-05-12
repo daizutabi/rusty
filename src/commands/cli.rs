@@ -19,6 +19,7 @@ enum Commands {
     Config(super::config::cli::Cli),
     Exec(super::exec::Cli),
     Test(super::test::Cli),
+    Optim(super::optim::Cli),
 }
 
 impl Cli {
@@ -28,6 +29,7 @@ impl Cli {
             Commands::Config(cli) => cli.exec(),
             Commands::Exec(cli) => cli.exec(),
             Commands::Test(cli) => cli.exec(),
+            Commands::Optim(cli) => cli.exec(),
         }
     }
 }
